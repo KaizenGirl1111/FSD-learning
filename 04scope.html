@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- var let const -->
+    <!-- scope -->
+
+    <script>
+    //     {
+    //     //block of code
+    //   }
+
+    //   for(){
+
+    //   }
+
+    var a=10 ;
+    let b=40;
+    const c=50;
+
+    // global variable
+
+    {
+        console.log(a,b,c)
+        {
+            console.log(a,b,c)
+        }
+    }
+
+    console.log(a,b,c)
+
+
+
+    {
+        var x=90;// global variable
+        {
+            console.log(x)//90
+            {
+                console.log(x)//90
+            }
+            console.log(x)//90
+        }
+        console.log(x)//90
+    }
+    console.log(x)//90
+
+    //doesnt have a scope
+    //functional scope
+
+    // let keyword
+
+    {
+        let s=90;
+        {
+            console.log(s)//90
+            {
+                console.log(s)//90
+            }
+        }
+        console.log(s)//90
+    }
+
+   // console.log(s)//not defined
+
+
+    {
+        {
+            {
+                {
+                    let s=80;
+                    console.log(s)//80
+                }
+                //console.log(s)// not defined
+            }
+           // console.log(s)// not defined
+        }
+        //console.log(s)// not defined
+    }
+    //console.log(s)// not defined
+
+
+    {
+        {
+            {
+                let s=80;
+                {
+
+                    console.log(s)//80
+                }
+                console.log(s)// 80
+            }
+           // console.log(s)// not defined
+        }
+        //console.log(s)// not defined
+    }
+    //console.log(s)// not defined
+
+
+    {
+        {
+            {
+                const s=80;
+                {
+
+                    console.log(s)//80
+                }
+                console.log(s)// 80
+            }
+         //  console.log(s)// not defined
+        }
+      //  console.log(s)// not defined
+    }
+    //console.log(s)// not defined
+
+
+
+    function functionname(){
+        var y=190;
+        console.log(y)//190
+    }
+    // console.log(y)//not defined
+    functionname()
+    //console.log(y)//not defined
+
+
+    // =
+    // ==
+    // ===
+
+
+    // =    assignment operator
+
+    // comparasion
+    //==  value
+    console.log(2==2)
+    console.log('2'==2)
+    console.log('20'==20)
+
+    //===
+    //strict comparion  value+datatype
+    console.log(2===2)
+    console.log('2'===2) //string is not equal to number
+    console.log('20'===2)//false
+
+
+    // Arthimatic operators
+    // logical operators
+    //conditional
+
+
+    var arr1=['123','456','9000']
+    // output
+    // 123  , number
+    // 456  , number
+    // 9000 , number
+    // number
+        for (let i = 0; i < arr1.length; i++) {
+            console.log(parseInt(arr1[i]),'\n');
+        }
+        
+        // Arithmetic operators
+//Arithmetic operators take numerical values(either literals or variables) as their operands and return a single numerical value.
+            //Exponentiation operator.
+                //Multiplication operator.
+
+          //conditional operator
+        function amount(isFee) {
+            return isFee ? '$2.00' : '$10.00';
+        }
+        console.log(amount(true));
+        //logical operators 
+        //Logical AND(&&) evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are truthy, the value of the last operand is returned.
+        result = "" && "foo"; // result is assigned "" (empty string)
+        result = 2 && 0; // result is assigned 0
+        result = "foo" && 4; // result is assigned 4
+        //The logical AND assignment(&&=) operator only evaluates the right operand and assigns to the left if the left operand is truthy.
+      //  let a = 1;
+       // let b = 0;
+
+        //a &&= 2;
+        console.log(a);
+        // Expected output: 2
+
+        b &&= 2;
+        console.log(b);
+// Expected output: 0
+      // ! ans !! NOT
+        true || false && false; // returns true, because && is executed first
+        (true || false) && false; // returns false, because grouping has the highest precedence
+
+
+        console.log((a **= 'hello'));
+// Expected output: NaN
+        Infinity * 0; // NaN
+        Infinity * Infinity; // Infinity
+        2n * 2n; // 4n
+        -2n * 2n; // -4n
+
+        2n * 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+
+        // To multiply a BigInt with a non-BigInt, convert either operand
+        2n * BigInt(2); // 4n
+        Number(2n) * 2; // 4
+        "foo" * 2; // NaN
+        "2" * 2; // 4
+    </script>
+
+</body>
+</html>
