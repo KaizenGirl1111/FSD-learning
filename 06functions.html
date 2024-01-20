@@ -31,7 +31,39 @@
     }
     //addition(3, 4); //arguments
     //addition(8, 9);
-
+    function marks_obtained(sub1, sub2, sub3, sub4) {
+        return sub1 + sub2 + sub3 + sub4;
+    }
+    function percentage(obtained_marks) {
+        let percent = (obtained_marks / 400) * 100;
+        console.log(`percentage is ${percent}%`);
+    }
+    console.log(marks_obtained(55, 68, 79, 80));
+    let obtained_marks = marks_obtained(55, 68, 79, 80);
+    percentage(obtained_marks );
+    let multiply= function(a,b){
+        console.log(a*b)
+    }
+    multiply(3, 5);//we need anonymous functions for window events window.onload = (event)
+    window.onload= function() {
+        console.log("page loaded"); //we don't need to call this function as .onload method automatically calls itselfs we dont need to call
+    }
+    let add = (a, b) => a + b;//you can't add return if you are writing return-val in same line it will throw error, for more than 1 line of code you will need flower braces and return 
+    console.log(add(5, 9.8)); //variable is add but acting like function name
+    window.onload = () => {
+        console.log("arrow function se loaded")
+        let arr1 = ['1', '2', '3', '40', '50'];
+        let sum = 0;
+        for (let i=0; i < 5; i++)
+        {
+            sum += parseInt(arr1[i]);
+        }
+        console.log(sum);
+        window.close();
+    }
+    let variable = () => console.log("used arrow fn");
+    variable();
+    
 </script>
 </body>
 </html>
