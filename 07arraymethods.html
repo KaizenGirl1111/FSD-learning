@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick="addition()">ADD</button>
+    <script>
+        let arr = [1, 2, 3, 4, 5, 6]
+        let res = arr.filter((element) => element % 2 != 0)
+        console.log(res)
+        var student = [
+            {
+                name: "kapil",
+                marks: 50
+            },
+            {
+                name: "rahul",
+                marks: 60
+            },
+            {
+                name: "sachin",
+                marks: 40
+            }
+        ]
+        let res2 = student.map((element, index) => element.marks + 20)
+        console.log(res2)
+        let res3 = student.filter((element) => element.marks >= 50)
+        let res4 = res3.map((element,index) => element.name)
+        console.log(res4)
+
+        let res5 = student.filter((element) => element.marks >= 50).map((element, index) => element.name)
+        console.log(res5)
+
+        let res6 = student.reduce((acc,cur)=>acc+cur.marks,0)
+        console.log(res6)
+
+        let res7 = res3.reduce((acc, cur) => acc + cur.marks, 0)
+        console.log(res7)
+        //every reduce filter map take function as a parameter
+    </script>
+</body>
+</html>

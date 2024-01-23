@@ -42,7 +42,20 @@
         }
         //console.log(x &&= y);
         //console.log(x ||= y);
-        ``
+        obj = {
+            key: 1,
+            author: 'Bill Gates',
+                title: 'The Road Ahead',
+            readingStatus: true
+        }
+        for (let key in obj) {
+            console.log(obj.key); // access with obj[key] not obj.key -->it means direct access to key key in object
+        }
+        //let a = 30, b = 10, c = 34;
+       // Math.max(a, b, c);
+        console.log(Math.ceil(5.005));
+        console.log(Math.floor(5.005));
+
     </script> 
 </body>
 </html>

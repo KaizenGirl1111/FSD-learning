@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+
+        var student = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12
+        };
+
+        function listProperties(obj) {
+            var properties = Object.keys(obj);
+            console.log(properties.join(','));
+        }
+
+        // Call the function with the 'student' object
+        listProperties(JSON.stringify(student));
+
+
+          let student2 = {
+        name: "David Rayy",
+        sclass: "VI",
+                rollno: 12
+};
+
+        // Print object before deletion
+        console.log(JSON.stringify(student2)); 
+
+        // Delete the 'rollno' property
+        delete student.rollno;
+
+        // Print object after deletion
+        console.log(JSON.stringify(student2));
+
+
+        let student3 = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12
+        };
+
+        function getObjectLength(obj) {
+            var length = Object.keys(obj).length;
+            console.log(length);
+        }
+
+        // Call the function with the 'student' object
+        getObjectLength(student3);
+
+
+        var student4 = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12
+        };
+
+        // Add the 'phonenumber' property
+        student4.phonenumber = "1234567890";
+
+        // Print the updated object
+        console.log(JSON.stringify(student4));
+
+        var library = [
+            {
+                author: 'Bill Gates',
+                title: 'The Road Ahead',
+                readingStatus: true
+            },
+            {
+                author: 'Steve Jobs',
+                title: 'Walter Isaacson',
+                readingStatus: true
+            },
+            {
+                author: 'Suzanne Collins',
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                readingStatus: false
+            }
+        ];
+
+        function displayReadingStatus(books) {
+            for (var i = 0; i < books.length; i++) {
+                var book = books[i];
+                console.log("Book Title: " + book.title);
+                console.log("Author: " + book.author);
+                console.log("Reading Status: " + (book.readingStatus ? "Already Read" : "Not Read Yet"));
+                console.log("---");
+            }
+        }
+
+        // Call the function with the 'library' array
+        displayReadingStatus(library);
+
+    </script>
+</body>
+</html>

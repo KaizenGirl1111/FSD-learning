@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        //Ques1:
+        //Create and Print hollow square star pattern 
+        //*****
+        //*   *
+        //*   *
+        //*   *
+        //*****
+
+        function hollowSquare(rows, cols) {
+            for (let i = 0; i < rows; i++) {
+                let row = '';
+                for (let j = 0; j < cols; j++) {
+                    if (i === 0 || j === 0 || i === rows - 1 || j === cols - 1) {
+                        rows += "*";
+                    }
+                    else {
+                        rows += " ";
+                    }
+                }
+                console.log(row);
+            }
+        }
+        console.log(hollowSquare(5, 5));
+//Ques2:
+//Print below left pascal traingle Pattern
+
+//    *
+//   **
+//  ***
+// ****
+//*****
+// ****
+// ***
+//   **
+ //   *
+        function leftPascal(rows) {
+            for (let i = 1; i <= rows; i++) {
+                let rows = "";
+                for (let j = 1; j <= rows; j++) {
+                    if (j <= rows - i) {
+                        rows += " ";
+                    }
+                    else {
+                        rows += "*";
+                    }
+                }
+                console.log(rows);
+            }
+        }
+        console.log(leftPascal(5));
+//Ques3:
+//Print below Hourglass Star Pattern
+
+//*********
+ //*******
+ // *****
+ //  ***
+   // *
+ //  ***
+//  *****
+// *******
+//*********
+        function hourglass(row) {
+            for (let i = 1; i <= row; i++) {
+                let row = ' '.repeat(i - 1) + '*'.repeat(2 * (row - i) + 1);
+                console.log(row);
+            }
+            for (let i = row - 1; i >= 0; i--) {
+                let row = ' '.repeat(i - 1) + '*'.repeat(2 * (row - i) + 1);
+                console.log(row);
+            }
+        }
+        hourglass(5);
+//Ques4:
+//Print below Hollow Diamond Pattern
+
+//    *
+//   * *
+//  *   *
+// *     *
+//*       *
+// *     *
+//  *   *
+ //  * *
+ //   *
+        function hollowDiamondPattern(rows) {
+            for (let i = 1; i <= rows; i++) {
+                let row = ' '.repeat(rows - i) + '*';
+                if (i > 1 && i < rows) {
+                    row += ' '.repeat((i - 1) * 2 - 1) + '*';
+                }
+                console.log(row);
+            }
+            for (let i = rows - 1; i >= 1; i--) {
+                let row = ' '.repeat(rows - i) + '*';
+                if (i > 1 && i < rows) {
+                    row += ' '.repeat((i - 1) * 2 - 1) + '*';
+                }
+                console.log(row);
+            }
+        }
+
+        // Call the function with rows = 5
+        hollowDiamondPattern(5);
+
+
+//Ques5:
+//Print below heart Star Pattern
+
+// ***   ***
+//***** *****
+//***********
+ //*********
+ // *******
+  // *****
+  //  ***
+  //   *
+        function heartStarPattern(rows) {
+            for (let i = 1; i <= rows; i++) {
+                let row = ' '.repeat(rows - i) + '*'.repeat(i * 2 - 1) + ' '.repeat(rows - i);
+                console.log(row);
+            }
+            for (let i = rows; i >= 1; i--) {
+                let row = ' '.repeat(rows - i) + '*'.repeat(i * 2 - 1) + ' '.repeat(rows - i);
+                console.log(row);
+            }
+        }
+
+        // Call the function with rows = 5
+        heartStarPattern(5);
+
+//Ques6:
+//Print below the traingle pattern
+//1
+//1 2
+//1 2 3
+//1 2 3 4
+//1 2 3 4 5
+        function numberTrianglePattern(rows) {
+            for (let i = 1; i <= rows; i++) {
+                let row = '';
+                for (let j = 1; j <= i; j++) {
+                    row += j + ' ';
+                }
+                console.log(row);
+            }
+        }
+
+        // Call the function with rows = 5
+        numberTrianglePattern(5);
+
+//Ques7:
+//Print below the traingle pattern
+//1
+//2 2
+//3 3 3
+//4 4 4 4
+//5 5 5 5 5
+        function repeatingNumberTrianglePattern(rows) {
+            for (let i = 1; i <= rows; i++) {
+                let row = '';
+                for (let j = 1; j <= i; j++) {
+                    row += i + ' ';
+                }
+                console.log(row);
+            }
+        }
+
+        // Call the function with rows = 5
+        repeatingNumberTrianglePattern(5);
+
+//Ques8:
+//Print the reverse traingle
+//12345
+//1234
+//123
+//12
+//1
+        function reverseTrianglePattern(rows) {
+            for (let i = rows; i >= 1; i--) {
+                let row = '';
+                for (let j = 1; j <= i; j++) {
+                    row += j;
+                }
+                console.log(row);
+            }
+        }
+
+        // Call the function with rows = 5
+        reverseTrianglePattern(5);
+
+//Ques9:
+//Print the number pyramid pattern
+//    1
+ //  123
+ // 12345
+// 1234567
+//123456789
+        function numberPyramidPattern(rows) {
+            let num = 1;
+            for (let i = 1; i <= rows; i++) {
+                let row = ' '.repeat(rows - i);
+                for (let j = 1; j <= 2 * i - 1; j++) {
+                    row += num;
+                    num++;
+                }
+                console.log(row);
+            }
+        }
+
+        // Call the function with rows = 5
+        numberPyramidPattern(5);
+
+//Ques10:
+//Print the Right Triangle Pattern in Javascript
+  //  *
+  // **
+ // ***
+// ****
+//*****
+        function rightTrianglePattern(rows) {
+            for (let i = 1; i <= rows; i++) {
+                let row = '*'.repeat(i);
+                console.log(row);
+            }
+        }
+
+        // Call the function with rows = 5
+        rightTrianglePattern(5);
+
+
+    </script>
+</body>
+</html>
