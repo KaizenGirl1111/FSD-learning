@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        let student =
+            {
+                name: "kapil",
+                marks: 50
+            };
+        console.log(JSON.stringify(student));
+        let a  = JSON.stringify(student);
+        console.log(JSON.parse(a));
+        let req = new XMLHttpRequest() //XML object is this 
+        console.log(req)
+         //.open a connection, then send a connection, initiate a bridge, then use an onload event to see the data
+       // fetch the data from the server via API 
+        req.open('GET',"https://restcountries.com/v2/all")
+        req.send()
+        req.onload=function(){
+        let data = JSON.parse(req.response)
+        for(let i=0;i<data.length;i++)
+        {
+          console.log(`Country name is ${data[i].name} and country flag is ${data[i].flags.svg}`)
+        }
+
+        // we can use parsed data
+        // create api key for open weather api
+        }
+    </script>
+</body>
+</html>
