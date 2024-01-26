@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        console.log(...arr);//spread operator
+        console.log(Math.max(...arr));//spreads out each element individually
+        console.log(Math.min(...arr));
+        // we can use parsed data
+        // create api key for open weather api
+        let s1 = "hello"
+        console.log(...s1)
+        console.log([...s1, ...arr])
+        function sum(x, y, z) {
+            console.log(x+y+z)
+        }
+        sum(...arr)
+        function sum2(arr) {
+            let s = 0;
+            for (let i=0; i < arr.length; i++) {
+                s+=arr[i]
+            }
+            console.log(s)
+        }
+        sum2(...arr)
+        let arr2 = Array.from({ length: 100 }, (_, index) => index + 1);
+        function sum3(a, b, c, ...args) {//rest parameter is last parameter
+            console.log(args)
+            console.log(...args)
+            console.log(Math.max(...args))
+        } 
+        sum3(60,50,70,80,100,55,47)
+        let name= "Avni Uplabdhee", classs = "10th", age= 21
+        obj = {
+            name: "Avni Uplabdhee",
+            classs: "10th",
+            age:21
+        }
+    </script>
+</body>
+</html>
