@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+    <style>
+        .margin {
+            border: 1px solid red;
+            width: 200px;
+            text-align: center;
+        }
+
+        .margin1 {
+            /* border:1px solid red;
+            width:200px;
+            text-align: center; */
+            margin: 50px;
+        }
+
+        .margin2 {
+            /* border:1px solid red;
+            width:200px;
+            text-align: center; */
+            /*margin: 100px 10px;*/
+            display:inline;
+        }
+
+        .margin3 {
+            /* border:1px solid red;
+            width:200px;
+            text-align: center; */
+            /*margin: 100px 20px 30px;*/ 
+        }
+        /*When span element is inline the height and width is not applicable*/
+        .margin4 {
+            /* border:1px solid red;
+            width:200px;
+            text-align: center; */
+            margin: 10px 30px 40px 50px;
+        }
+        #test {
+            background-color: pink;
+            height:50px;
+            width:50px;
+            position:absolute; 
+            left:120px;
+            top:50px;
+        }
+        .parent {
+            border: 1px solid red;
+            width: 200px;
+            position:relative;
+            background-color:yellow;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">Parent
+        <div id="test">Child</div>
+    </div>
+    <div class=" margin2">Margin2</div>
+    <span class="margin3">Margin3</span>
+    <div class="margin margin4">Margin4</div>
+    <div class="margin margin5">Margin5</div>
+</body>
+</html>

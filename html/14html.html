@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p><b><a href="www.google.com">Click here</a></b><br>to get redirected to the <i>home page</i>.</p>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Sr.No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Avni Uplabdhee</td>
+                <td>avnigungun@gmail.com</td>
+                <td>8767009121S</td>
+            </tr>
+        </tbody>
+    </table>
+    <form>
+        <--!for attribute oflabel tag and idofinput are used together tobind eachother-->
+            <label for="sal">Salutation</label>
+            <input type="text" name="salutation" id="sal" value="Ms." readonly />
+
+            <label for="">First name</label>
+            <input type="text" name="firstname" id="" /><br>
+            <label for="">Last name</label>
+            <input type="text" name="lastname" id="" /><br>
+            <label for="">First name</label>
+            <input type="text" name="dob" id="" /><br>
+            <label for="">DOB</label>
+            <input type="date" name="age" id="" /><br>
+            <label for="">Age</label>
+            <input type="number" name="age" id="" /><br>
+            <label for="">Male</label>
+            <input type="radio" name="gender" id="" value="Female" />//grouping operator for radio button by same name
+            <label for="">Female</label>
+            <input type="radio" name="gender" id="" value="Name" /><br>
+            <label for="vehicle1">Car</label>
+            <input type="checkbox" name="vehicle1" id="vehicle1" value="Car" />
+            <label for="vehicle2">Bus</label>
+            <input type="checkbox" name="vehicle2" id="" value="Bus" /><br>
+            <label for="">Email</label>
+            <input type="text" name="" id="" /><br>
+            <label for="">Password</label>
+            <input type="password" name="" id="" /><br>
+            <label for="">Favorite color</label>
+            <input type="color" name="" id="" /><br> // value attribute sets the form values as prefixed
+            <input type="submit" name="" id="" value="submit" /><br> //due to name tag the values will go to url  as parameters  on submitting
+
+    </form>
+    change in url  as parameters  on submitting as name attribute
+    <div>
+        <!-- ul-unordered list-->
+        <!-- ol-ordered list -->
+        <!-- type -->
+        <ul>
+            <li>
+                Programming Language
+                <ul type="circle">
+                    <li>
+                        JavaScript
+                        <ol type="a">
+                            <li>Anugular</li>
+                            <li>React</li>
+                            <li>Vue.js</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Python
+                        <ol type="a">
+                            <li>Django Framework</li>
+                            <li>Flask Framework</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Java
+                        <ol type="a">
+                            <li>Spring</li>
+                            <li>Maven</li>
+                            <li>Hibernate</li>
+                        </ol>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                Database
+                <ul>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    <li>Cansandra</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>
