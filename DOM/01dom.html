@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+    .class1 {
+        padding: 10px 10px 10px 10px;
+        background-color: aquamarine
+    }
+    .class2 {
+        background-color: mintcream
+    }
+</style>
+<body>
+    <div id="test1" class="class3">hello world</div>
+    <div id="test1" class="class3">hello world</div>
+    <div id="test1" class="class3">hello world</div>
+    <div id="test1" class="class3">hello world</div>
+</body>
+<script>
+    console.log(window.document);
+    //html
+    var division = document.createElement('div');
+    division.innerHTML = `<h1>Hello world</h1>`;
+    document.body.append(division);
+    //text
+    var division2 = document.createElement('div');
+    division2.innerText = `<h1>Hello world</h1>`;
+    document.body.append(division2);
+
+    //id name and id value
+    division.setAttribute('id', 'idtest');
+    //multiple classes
+    division.classList.add('main1', 'main2', 'main3');
+    division.classList.remove('main1', 'main2', 'main3');
+
+    var contain = document.createElement('div');
+    document.body.append(contain);
+    contain.style.padding = "30px 60px 20px 20px"
+    //margin padding and border works in trbl:top right bottom left
+    //if 2 padding given then opposite sides padding,for 1:all sides same, check in box model
+    contain.style.margin = "30px 60px 20px"
+    contain.style.borderWidth  = "5px 2px 10px 7px"
+    contain.style.borderColor = "red"
+    contain.style.borderStyle = "dotted"
+    contain.style.backgroundColor = "aquamarine"
+    //contain.classList.add('class1');
+    //appenChild will not accept more than 1,append can when separated by comma operator
+    var wrap = document.createElement('div');
+    wrap.innerHTML =`<h1>heading tag</h1> <h5>heading tag</h5>`
+    contain.appendChild(wrap);
+    wrap.classList.add('class2');
+     //create table from dom, make function to make tag and its value
+    var test2 = document.getElementsByClassName('class3')
+    console.log(test2)
+    // document.getElementsByTagName
+
+    for (var i = 0; i < test2.length; i++) {
+        console.log(test2[i])
+    }
+</script>
+</html>
