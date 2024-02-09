@@ -1,0 +1,2 @@
+Methods are predefined functions eg.window.open() (f will be returned in console)
+properties aren't (window.innerWidth gives direct value)
