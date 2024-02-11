@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick="addition()">ADD</button>
+    <script>
+       /* console.log("Hi,Hello");
+        setTimeout(() => {
+            console.log("async")
+        }, 3000)
+        console.log("Hi,Hello")
+        setTimeout(() => {
+            console.log("repear")
+        }, 4000)
+        console.log("Hi,Hello")*/
+        let t = document.getElementById('demo');
+        for (let i = 1; i <= 10; i++) {
+            setTimeout(() => {
+                if (i < 10) {
+                    console.log(i);
+                    t.innerText = i;
+                } else {
+                    console.log("Happy new year");
+                    t.innerText = "Happy new year";
+                }
+            }, i * 1000);
+        }
+
+    </script>
+</body>
+</html>

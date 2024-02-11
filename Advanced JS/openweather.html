@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<input type="text" id="test"/>
+<script>
+    document.getElementById("test").addEventListener('blur', (e) => {
+        console.log(document.getElementById("test").id)
+        console.log(`https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=4e9072b6dc7cdc16ca7c54e1b3bc1005`)
+        var request = new XMLHttpRequest()
+        request.open('GET', `https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=4e9072b6dc7cdc16ca7c54e1b3bc1005`)
+        request.send()
+       request.onload = function () {
+            let data = JSON.parse(request.response)
+            console.log(data)
+       }
+    })
+    let a = 15
+    console.log(`a value is ${a}`)
+    let city = "london"
+    console.log(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4e9072b6dc7cdc16ca7c54e1b3bc1005`)
+</script>
+</body>
+</html>

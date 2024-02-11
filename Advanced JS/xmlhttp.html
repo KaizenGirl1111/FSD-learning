@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var request = new XMLHttpRequest()
+        request.open('GET', 'https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid={4e9072b6dc7cdc16ca7c54e1b3bc1005')
+        request.send()
+        request.onload = function () {
+            let data = JSON.parse(request.response)
+            console.log(data)
+        }
+    </script>
+</body>
+</html>

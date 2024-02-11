@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+    <!--<button onclick="display(event)">CLICK ME</button>-->
+    <input type="text" value="save" onblur="test1(event)" /> <!--loosing focus-->
+    <input type="text" value="save" onchange="test1(event)" placeholder="khaali jagah" />
+    <p id="displayText"></p>
+    <script>
+        /* function display(event) {
+             console.log("clicked")
+             console.log(event)
+             console.log(event.target.value)
+             displayText.innerText=event.target.value
+         }*/
+        function test1(event) {
+            console.log(event.target.value)
+            displayText.innerText = event.target.value
+        }
+        document.addEventListener("keydown", (event) => {
+            if (event.keyCode == 72) {
+                console.log(event.key)
+            }
+            console.log(event)
+
+        }
+            //when you perform any action event is triggered and event is nothing but an object it contains all info about all these elements
+    </script>
+</body>
+</html>
