@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #movingDiv {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick="addition()">ADD</button>
+
+    <div id="movingDiv"></div>
+    <p id="randomNumber"></p>
+
+    <script>
+        let t = document.getElementById('demo');
+        let i = 1;
+        let intervalId = setInterval(() => {
+            if (i < 10) {
+                console.log(i);
+                t.innerText = i;
+            } else {
+                console.log("Happy new year");
+                t.innerText = "Happy new year";
+                clearInterval(intervalId); // Stop the interval after printing "Happy new year"
+            }
+            i++;
+        }, 1000);
+
+        let movingDiv = document.getElementById('movingDiv');
+        let colors = ['red', 'blue', 'green', 'yellow', 'orange', 'purple']; // Array of colors
+        let index = 0; // Initial color index
+        let moveInterval; // Variable to hold the interval ID for moving the div
+
+        // Function to change the color of the div
+        function changeColor() {
+            movingDiv.style.backgroundColor = colors[index];
+            index = (index + 1) % colors.length; // Move to the next color
+        }
+
+        // Function to move the div
+        function moveDiv() {
+            let left = 0; // Initial left position
+            moveInterval = setInterval(() => {
+                left += 5; // Move 5 pixels to the right
+                movingDiv.style.left = left + 'px';
+                if (left >= window.innerWidth - 100) { // Check if the div reaches the right edge
+                    clearInterval(moveInterval); // Stop moving when reached
+                    clearInterval(colorInterval); // Stop changing color when reached
+                }
+            }, 100); // Interval for moving
+        }
+
+        // Start moving the div
+        moveDiv();
+
+        // Change color every 1 second
+        let colorInterval = setInterval(changeColor, 1000);
+        let randomNumberElement = document.getElementById('randomNumber');
+
+        // Function to generate a random number
+        function generateRandomNumber() {
+            let randomNumber = Math.random() * 100;
+            randomNumber = Math.floor(randomNumber);// Generate a random number between 0 and 100 (exclusive)
+            randomNumberElement.textContent = randomNumber; // Display the random number with two decimal places
+        }
+
+        // Generate a random number every second
+        setInterval(generateRandomNumber, 1000);
+    </script>
+</body>
+</html>
