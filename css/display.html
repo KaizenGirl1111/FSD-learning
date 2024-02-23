@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test{
+           margin-bottom:10px;
+        }
+        #div1{
+        background-color:yellow;
+        display:none;
+        }
+        #div2{
+        background-color:pink;
+        display:inline;
+        }
+        #span1{
+        background-color:orange;
+        }
+        h4{
+             /* block=> inline ++ inline properties applicable and block=> null and void*/
+            display: inline;
+            background-color:aqua;
+        }
+        #span2{
+            /* inline=> block ++ block properties applicable and inline=> null and void*/
+            background-color: blueviolet;
+            display: block;
+            height:100px;
+            width:200px;
+        /*when u make span block which is inherently not block, then height and width both are applicable*/
+        }
+        #span3{
+            /* inlline */
+            /* h and w not appliacble */
+            background-color: chartreuse;
+            height:100px;
+            width:200px;
+        }
+        #div3{
+        background-color:chocolate;
+        display:inline-block;
+        height:100px;
+        width:200px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="test">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, fugit.</div>
+    <hr>
+    <h4>Inline display</h4>
+    <div id="div2" class="test">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, fugit.</div>
+     <span id="span1" class="test">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, fugit.</span>
+     <hr>
+     <hr>
+     <!-- inlline=explixity mentioned -->
+    <h4>displayblock:-</h4>
+    <!-- block-expliciry mentioned -->
+    <span id="span2" class="test">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, fugit.</span>
+    <span id="span3" class="test">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, fugit.</span>
+    
+    <hr>
+
+    <!---inline explicitly mentioned--->
+     <h4>displayblock</h4>
+    <!---block explicitly mentioned--->
+     <div id="div3" class="test">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, fugit.</div>
+     <div id="div4" class="test">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, fugit.</div>
+    <hr>
+</body>
+</html>
