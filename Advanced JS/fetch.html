@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+
+
+        let url = "https://restcountries.com/v2/all"
+        let req = fetch(url)
+        console.log(req)
+        let api_key = "b989f462963747f0f41ca6c6a3d2fcde"
+    req.then(res => res.json()).then(data => {
+        console.log(data)
+        console.log(data[1].latlng)
+        let ind = Math.round(Math.random()*data.length)
+        console.log(ind)
+        let lat = data[ind].latlng[0]
+        let lon = data[ind].latlng[1]
+        console.log(lat, lon)
+        let url3 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`
+        let req2 = fetch(url3)
+        req2.then(res => res.json()).then(data => {
+            console.log(data)
+        })
+        //it is converting into json and returning promise everytime so we need to use .then twice
+        let url4 = "0419b0"
+    })
+    </script>
+</body>
+</html>

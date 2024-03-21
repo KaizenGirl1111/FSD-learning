@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+
+        let url = "https://restcountries.com/v2/all"
+        let req = fetch(url)
+        console.log(req)
+        let api_key = "b989f462963747f0f41ca6c6a3d2fcde"
+        async function get_countries_data() {
+            let URL = "https://restcountries.com/v2/all"
+            let res = await fetch(URL)
+            let data = await fetch(res.json())
+            console.log(res)
+            console.log(data)
+        }
+        get_countries_data()
+</script>
+</body>
+</html>

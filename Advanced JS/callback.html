@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let naam;
+        function naming(fname, sname) {
+
+            console.log(`My name is ${fname} ${sname}`)
+        }
+        function calling(firstname, fn) {
+            naming(firstname, "Pal")
+            console.log('This is a callback')
+        }
+        calling("Gungun", naming)
+          
+            function getCountryData() {
+                var request = new XMLHttpRequest();
+
+                request.open('GET', 'https://restcountries.com/v2/all');
+
+                request.send();
+                request.onload = function f() {
+                    let data = JSON.parse(request.response)
+                    callback(data)
+                }
+        }
+        // Using a callback function
+        function callback(data) { 
+                    console.log(data);
+            }
+       f()
+
+    </script>
+</body>
+</html>

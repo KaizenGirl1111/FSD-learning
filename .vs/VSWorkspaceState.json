@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Advanced JS",
-    "\\DOM",
-    "\\html",
-    "\\WOM"
+    "\\css",
+    "\\react-vite\\public",
+    "\\react-vite\\src\\Component"
   ],
-  "SelectedNode": "\\css",
+  "SelectedNode": "\\css\\fontawesome.html",
   "PreviewInSolutionExplorer": false
 }

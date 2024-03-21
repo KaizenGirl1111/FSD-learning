@@ -1,0 +1,28 @@
+inversion of control is issue with callback functions 
+callback(cart,function(orderId)) =>giving control to function part of code we aren't aware of
+const promise = callback(cart)
+
+promise.then(function(orderId)=>{})
+
+//the function is attached to promise object, and it will be called only when we want to call
+eg. 
+const user = fetch(GITHUB_API)
+console.log(user)
+promise has 3 states resolved pending rejected
+in chrome broweser this thing in console.log will in heading show pending but in promiseState show fulfill as it takes sometime to fetch the api and js browser executes all lines during that time its pending
+
+promise brings trust in the transaction
+
+while using async await to deal with promise, the await keyword ensures that first the promise is executed only then it goes to next line of code
+
+const p = new Promise((resolve,reject)=>{
+        setTimeOut(()=>{
+		resolve("Promise resolved value")
+		},1000)
+		});
+async function handlePromise(){
+          const val = await p;
+		  console.log("Namaste Javascript"); // first the async function waits for promise to be executed, then onky namaste js will be printed
+		  console.log(val);
+		  }
+handlePromise();

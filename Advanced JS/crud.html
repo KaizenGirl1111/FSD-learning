@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        let url = "https://65e18828a8583365b316a2d9.mockapi.io/user"
+        async function getData() {
+            let req = await fetch(url);
+            let res = await req.json();
+            console.log(res);
+        }
+        getData()
+        async function createUser() {
+            let newUser = {
+                "name": "New User",
+                "email": "newuser@example.com"
+            }
+            let res = await fetch(url, {
+                method: "POST",
+                headers: { 'content-type': 'application/json' },
+                body:JSON.stringify(newUser) // browser sends and accepts req in string
+            })
+        }
+        createUser()
+        let deleteUserId = 5
+       async function deleteUser() {
+            let res = await fetch(`${url}/${deleteUserId}`, { method: "DELETE" })
+        }
+       // deleteUser();
+        let updateUserId = 3
+        async function updateUser() {
+            let update_user = {
+                "name": "Avni Uplabdhee",
+                "email": "avnigungun@gmail.com"
+            }
+            let res = await fetch(`${url}/${updateUserId}`, {
+                method: "PUT",
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify(update_user) // browser sends and accepts req in string
+            })
+        }
+        updateUser();
+    </script>
+
+</body>
+</html>
