@@ -1,9 +1,9 @@
-function SummaryCard(props) {
+function SummaryCard({summary}) {
    
     return (
         <>
-            {console.log(props.summary)}
-            <p>summary of {props.summary}</p>
+            {console.log(summary)}
+            <p>summary of {summary}</p>
         </>
     )
 }

@@ -1,15 +1,27 @@
-import SummaryCard from './SummaryCard.jsx'
-function ProfileCard(props) {
-    console.log(props)
-    return (
+import SummaryCard from './SummaryCard.jsx';
+import {useState} from "react";
+import LikeDislike from "./LikeDislike.jsx";
+function ProfileCard({image,name,nickname,age,contact_number,summary}) {
+     const [time,setTime] = useState(5)
+     const [btnName,setbtnName] = useState("Given")
+     const [like,setLike] = useState(0)
+     const [dislike,setDislike] = useState(0)
+    return (  
         <>
          <div className="border">
-                <img className="profile-pic" src={props.image} />
-                <h4>Welcome {props.name}</h4>
-                <h5>Nickname {props.nickname}</h5>
-                <p>Age {props.age}</p>
-                <p>Contact {props.contact_number}</p>
-                <SummaryCard summary={props.summary} />
+                <img className="profile-pic" src={image} />
+                <h4>Welcome {name}</h4>
+                <h5>Nickname {nickname}</h5>
+                <p>Age {age}</p>
+                <p>Contact {contact_number}</p>
+                <SummaryCard summary={summary} />
+                <h6>Time {btnName}:{time} mins</h6>
+                <button onClick={()=>{
+                    setTime(time+10)
+                    setbtnName("Taken")
+                }}>update Time</button>
+                <br/>
+               <LikeDislike/>
             </div>  
    
         </>
@@ -27,3 +39,7 @@ export default ProfileCard;
 // attribute ={"attribute value"}// args
 
 // React > Properties > Props 
+
+//hooks-function
+//[state,setState] = useState(500)
+//initial values:"" number [] null empty 

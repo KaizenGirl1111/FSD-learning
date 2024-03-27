@@ -2,10 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\Advanced JS",
+    "\\CRUD",
     "\\css",
+    "\\DOM",
+    "\\react-vite",
     "\\react-vite\\public",
+    "\\react-vite\\src",
     "\\react-vite\\src\\Component"
   ],
-  "SelectedNode": "\\css\\fontawesome.html",
+  "SelectedNode": "\\react-vite\\src\\Component\\DisplayCard.jsx",
   "PreviewInSolutionExplorer": false
 }
