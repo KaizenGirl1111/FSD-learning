@@ -1,0 +1,31 @@
+body {
+    background: rgb(250,204,255);
+    background: radial-gradient(circle, rgba(250,204,255,1) 0%, rgba(190,147,253,1) 100%);
+}
+.nav-color {
+    background-color: #714DAF;
+}
+.btn-color {
+    background-color: #A178DF;
+}
+/*
+tr:nth-child(2n) {
+    background-color: #9B89B3;
+}
+tr:nth-child(2n+1) {
+    background-color:#FCF8FF;
+}
+*/
+.custom-striped-table-cols td:nth-child(odd) {
+    background-color: #C197FF;
+    color: white;
+}
+.custom-striped-table-cols td:nth-child(even) {
+    background-color: #FCF8FF;
+}
+.custom-striped-table-cols th {
+    background-color: #714DAF
+}
+.text-white{
+    color:"white"
+}
