@@ -1,0 +1,36 @@
+nvm --list
+nvm v20.16.0
+node -v20
+
+//global provides a substitute for window methods of browser in node, process provides substitute for document
+
+//blocking of code, code runs in sequential order
+
+function add(a,b){
+return a+b};
+
+console.log("one")
+console.log("two",add(2,3)) // even though time has been taking yet line by line excecuted code, code blocking
+console.log("three")
+
+
+console.log("one")
+console.log(setTimeout(()=>console.log("two"),1000) // even though time has been taking yet line by line excecuted code, code blocking
+console.log("three")
+----------------------------------
+
+console.log(2)
+function addAsync(a,b,callback){
+let sum=a+b;
+setTimeout(()=>console.log(sum),2000)
+}
+//in callbacks and aysnc functions
+eg
+function callback(sum){
+console.log(sum)
+}
+
+addAsync(2,3,callback)
+console.log(6)
+
+-->2,6,5 //non blocking
